@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 500px;
+  height: 600px;
   z-index: -1;
   opacity: 0.4;
 }
@@ -26,17 +26,17 @@
   padding-bottom: 0.5em;
 }
 
-#showcase .main-nav {
+#showcase #main-nav {
   padding-top: 5px;
 }
 
-#showcase .main-nav ul {
+#showcase #main-nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0 0.5em;
 }
 
-#showcase .main-nav a {
-  position: inherit;
+#showcase #main-nav a {
   display: block;
   background: #333;
   color: #fff;
@@ -46,7 +46,7 @@
   margin: .5em 0;
 }
 
-#showcase .main-nav a:hover {
+#showcase #main-nav a:hover {
   background: #eaeaea;
   color: #333;
 }
@@ -108,6 +108,55 @@
   text-decoration: none;
 }
 
+@media (min-width: 700px) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #main-nav {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 50px;
+  }
+  #main-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0;
+    margin: 0 0.5em;
+  }
+  #main-nav li {
+    width: 100%;
+    height: 100%;
+    margin: 15px;
+    padding: 0;
+  }
+  #main-nav a {
+    width: 100%;
+  }
+  .content-wrap,
+  #section-b ul {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+  }
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -116,6 +165,8 @@ body {
   font-size: 1.1em;
   line-height: 1.5;
   text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 img {
@@ -135,7 +186,7 @@ p {
 }
 
 .btn {
-  display: inline-block;
+  display: block;
   background: #333;
   color: #fff;
   text-decoration: none;
