@@ -1,5 +1,7 @@
 @import 'variables';
 @import 'headerShowcase';
+@import 'sections';
+@import 'footer';
 
 body{
     margin: 0;
@@ -36,8 +38,8 @@ p {
     border: 1px solid $border-color;
     margin: .5em 0;
 
-    :hover{
+    &:hover{
         background: #eaeaea;
-        color: #333;
+        color: $dark-gray;
     }
 }

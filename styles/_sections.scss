@@ -1,0 +1,56 @@
+@import 'variables';
+
+// Section A
+
+#section-a{
+    background: #eaeaea;
+    color: $dark-gray;
+    padding: 2em;
+
+    & .content-wrap{
+        padding: 0 1.5em;
+    }
+}
+
+// Section B
+
+#section-b{
+    padding: 2em 1em 1em;
+    
+    & ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    & li{
+        margin-bottom: 1em;
+        background: $light-white;
+        color: $dark-gray;
+    }
+
+    & .card-content{
+        padding: 1.5em;
+    }
+}
+
+// Section C
+
+#section-c{
+    background: $light-white;
+    color: $dark-gray;
+    padding: 2em;
+}
+
+// Section D
+
+#section-d{
+    & .box{
+        padding: 2em;
+        color: $light-white;
+
+        &:first-child{
+            background: #2690d4;
+        }
+    }  
+}

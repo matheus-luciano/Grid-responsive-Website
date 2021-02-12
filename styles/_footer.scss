@@ -1,0 +1,13 @@
+@import 'variables';
+
+#main-footer{
+    padding: 2em;
+    background: black;
+    color: $light-white;
+    text-align: center;
+
+    & a{
+        color: #2690d4;
+        text-decoration: none;
+    }
+}
