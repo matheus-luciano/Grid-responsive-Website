@@ -3,10 +3,13 @@
 @media(min-width: 700px){
     .grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
     }
     
+    .btn{
+        display: inline-block;
+    }
+
     #main-nav{
         grid-column: 1/5;
         justify-content: space-between;
@@ -34,8 +37,43 @@
 
     }
 
+    #section-a{
+        & .content-text{
+            columns: 2;
+        }
+
+        p{
+            padding-top: 0;
+        }
+    }
+
+    #section-b{
+        ul{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        li{
+            width: 31%;
+        }
+    }
+
     .content-wrap,
     #section-b ul{
         grid-column: 2/4;
+    }
+
+    .box{
+        grid-column: span 2;
+    }
+
+    #main-footer{
+        grid-column: 1/5;
+       
+
+        div{
+            grid-column: 2/4;
+            
+        }
     }
 }
